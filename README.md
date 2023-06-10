@@ -1,4 +1,4 @@
-# inshorts_clone
+# news mobile app
 
 A new Flutter project.
 
