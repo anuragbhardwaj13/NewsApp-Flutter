@@ -32,7 +32,6 @@ class _DetailViewScreenState extends State<DetailViewScreen> {
         title: Text("News App"),
       ),
       body: WebView(
-        onProgress: (progress) => print("$progress"),
         initialUrl: widget.newsUrl,
         javascriptMode: JavascriptMode.disabled,
         onWebViewCreated: (WebViewController webViewController) {
