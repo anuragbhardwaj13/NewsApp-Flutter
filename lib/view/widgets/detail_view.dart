@@ -30,6 +30,8 @@ class _DetailViewScreenState extends State<DetailViewScreen> {
     return Scaffold(
       appBar: AppBar(
         title: Text("News App"),
+        centerTitle: true, // Center align the title
+        elevation: 0,
       ),
       body: WebView(
         initialUrl: widget.newsUrl,

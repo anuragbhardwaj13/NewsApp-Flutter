@@ -42,6 +42,8 @@ class _HomeScreenState extends State<HomeScreen> {
     return Scaffold(
       appBar: AppBar(
         title: Text("News App"),
+        centerTitle: true, // Center align the title
+        elevation: 0, // Remove the app bar shadow
       ),
       body: PageView.builder(
         controller: PageController(initialPage: 0),
