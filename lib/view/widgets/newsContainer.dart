@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:inshorts_clone/view/widgets/detail_view.dart';
 
 class NewsContainer extends StatelessWidget {
   String urlToImage;
@@ -36,7 +37,11 @@ class NewsContainer extends StatelessWidget {
                 style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
               ),
               Text(
-                content,
+                content != "--"
+                    ? content.length > 250
+                        ? content.substring(0, 250)
+                        : "${content.toString().substring(0, content.length - 15)}..."
+                    : content,
                 style: TextStyle(fontSize: 16),
               ),
               Align(
@@ -57,7 +62,11 @@ class NewsContainer extends StatelessWidget {
                 padding: const EdgeInsets.symmetric(horizontal: 20),
                 child: ElevatedButton(
                     onPressed: () {
-                      print("going to $newsUrl");
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) =>
+                                  DetailViewScreen(newsUrl: newsUrl)));
                     },
                     child: Text("Read More")))
           ],
