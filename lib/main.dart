@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:inshorts_clone/model/category.dart';
 import 'package:inshorts_clone/view/home.dart';
 
 void main() {
@@ -11,12 +12,13 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'News Agency',
+      title: 'Saransa',
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurpleAccent),
+        colorScheme: ColorScheme.fromSeed(
+            seedColor: const Color.fromARGB(255, 100, 206, 255)),
         useMaterial3: true,
       ),
-      home: HomeScreen(),
+      home: HomeScreen(category: Category(name: "General", apiKey: "general")),
     );
   }
 }

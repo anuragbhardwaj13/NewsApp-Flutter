@@ -29,7 +29,7 @@ class _DetailViewScreenState extends State<DetailViewScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("News App"),
+        title: const Text("News App"),
         centerTitle: true, // Center align the title
         elevation: 0,
       ),
